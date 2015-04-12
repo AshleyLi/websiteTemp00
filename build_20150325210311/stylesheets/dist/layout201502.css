@@ -1,0 +1,74 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:300);
+@import url(http://fonts.googleapis.com/css?family=Raleway:100);
+.bgGrey{
+	background-color: grey;
+}
+.mainColor1{ color: #00acb8;}
+.mainColor1b{ background-color: #00acb8;}
+.mainColor2{ color: #fbcf2a;}
+.mainColor2b{ background-color: #fbcf2a;}
+.mainColor3{ color: #999999;}
+.mainColor3b{ background-color: #999999;}
+.lightGreyBg{ background-color: #eeeeee;  }
+
+.pbox{ padding: 1.5em;}
+div.sepNone{ padding: 1em; display: block;}
+div.sepNone.max{ padding: 3em; display: block;}
+.mesbox{ padding: 1.5em; color:white;}
+.mesbox h3.ui.header { color:white; font-family: 'Raleway', sans-serif;}
+.mesbox h3.ui.header .sub.header{color:white; font-family: 'Raleway', sans-serif; opacity: 0.8; margin-top: 0.75em;}
+
+div.separater{border-top: 1px solid #eeeeee;}
+div.separater.max{ border-width: 5px;}
+
+/* sementic ui*/
+.ui.circular.button{ background-color: white;}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{font-family: 'Raleway', sans-serif;font-weight: 100;}
+.ui.list .list > .item .header, .ui.list > .item .header{ color:#00acb8 !important;font-family: 'Raleway', sans-serif; }
+.ui.list .list > .item .description, .ui.list > .item .description{color: rgba(0, 0, 0, 0.5);}
+.ui.list .list > .item > i.icon, .ui.list > .item > i.icon{ padding: .75rem 1rem;}
+ul.ui.list li, ol.ui.list li, .ui.list > .item, .ui.list .list > .item{ padding:.75em 0em;}
+.ui.list .list > .item > i.icon, .ui.list > .item > i.icon{ color:#00acb8;}
+.ui.divided.list > .item{ border-top:none; background: #eeeeee; padding: .75em 0em;}
+.ui.list .list > .item .header, .ui.list > .item:nth-child(2n){ background-color: transparent;}
+.ui.divided.list > .item:last-child:nth-child(2n){ border-bottom: 1px solid rgba(39, 41, 43, 0.15); }
+.header{font-family: 'Raleway'}
+
+
+/* Bootstrap */
+.navbar-default{ border:none;}
+ul.nav.navbar-nav.navbar-right > li > a { padding-left: 0px; font-family: 'Raleway', sans-serif; color:#a5a5a4;}
+ul.nav.navbar-nav.navbar-right > li:last-child > a::after{ content:"";}
+ul.nav.navbar-nav.navbar-right > li > a::after {content:"/"; padding-left: 1.5rem; color:#a5a5a4; }
+ul.nav.navbar-nav.navbar-right > li > a:hover{ color:#333;}
+.navbar-toggle{margin-right:0px;}
+.navbar-default .navbar-toggle{ border-color:transparent;}
+.carousel.slide{ position: absolute; bottom: 0px;}
+
+/* Global setting 
+==============================================*/
+body{color:rgba(0, 0, 0, 0.5);}
+a{ color:#ff931e;}
+h2.title{ color:#999999; font-weight: 100; margin-top: 0px;}
+#footer{}
+#footer ul { padding-left:0px;}
+#footer ul > li { list-style: none;}
+
+/*index
+==============================================*/
+#index .logo{ position: absolute; z-index: 1;  top:50px; left: 30px;}
+#index .topMenu{ position: relative; z-index: 1000;}
+#index .sliders{ min-height: 300px;  position: relative;}
+.noticAward{
+	height: 400px;
+	position: relative; 
+	bottom: 130px;
+}
+#index h3.ui.header .sub.header{ margin-top: 0.75em;}
+#index .area1 > div{ max-height: 270px; overflow: visible;}
+#index .area1 .pbox{min-height: 270px;}
+#index .project1 .ribbon{position: absolute;left: 2px;top: 200px;}
+
+
+
+

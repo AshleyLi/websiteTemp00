@@ -1,0 +1,145 @@
+
+<div id="papers" class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-4"><h1 class="pageTitle">Papers</h1></div>
+                <div class="col-md-8 cateSelect">
+                    <div class="ui large labels">
+                        <div class="ui yellow label">
+                            All
+                        </div>
+                        <div class="ui label">
+                            UI
+                        </div>
+                        <div class="ui label">
+                            UX
+                        </div>
+                        <div class="ui label">
+                            3D
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sepNone"></div>
+
+            <div class="row itemList">
+
+                <% 3.times do%>
+                <div class="col-md-12 ">
+                    <div class="mainColor1b item"> 
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a href="" class="img jsp_imgA"><img class="jsp_imgPos" src="images/projects-imgDemo.jpg"  alt=""></a>
+                            </div>
+                            <div class="col-md-6 content">
+
+                                <h2 class="title">HearMe</h2>
+                                <p class="abstract jsp_textOverflow"><%= lorem_paragraph %></p>
+                                <div class="abstract2show">
+                                   
+                                </div>
+                                <a class="circular ui icon button">
+                                    <i class="icon download"></i>
+                                </a>
+                            </div>
+                            <div class="col-md-3 content">
+                            
+                            <h5>Project members</h5>
+                                <ul>
+                                    <li><a href="">Member name / UI Designer</a></li>
+                                    <li><a href="">Member name / PM</a></li>
+                                    <li><a href="">Member name / Developer</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+                <% end %>
+
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="ui borderless pagination menu">
+  <a class="item">
+    <i class="left arrow icon"></i> Previous
+  </a>
+  <a class="item">1</a>
+  <a class="item">2</a>
+  <a class="item">3</a>
+  <a class="item">4</a>
+  <a class="item">5</a>
+  <a class="item">6</a>
+  <a class="item">
+    Next <i class="icon right arrow"></i>
+  </a>
+</div>
+                </div>
+            </div>
+            <div class="sepNone "></div>
+        </div>
+    </div>
+</div>
+<script>
+
+
+
+    $(document).ready(function(){
+        //限制字符个数
+        $('.jsp_textOverflow').each(function(){
+            var maxwidth = 300 ;
+            if($(this).text().length > maxwidth){
+            $(this).text($(this).text().substring(0 , maxwidth) );
+            $(this).html($(this).html() + '…' );
+            }
+        });
+
+        //show abstract
+        $("button").click(function(){
+            $("p").toggle();
+        });
+    });
+
+
+    $( window ).ready(function() {
+        var windowSize = $(window).width();
+        var currentW = $(window).width();
+        var imgW = $('img.jsp_imgPos').width();
+        var imgH = $('img.jsp_imgPos').height();
+        var aW = $('a.jsp_imgA').width();
+        var itmeH = $('div.item').height();
+        var newPos ;
+        function checkWidth() {
+            if ( windowSize > 992) {
+                newPos = imgW / 2 - aW / 2;
+                // alert('newPos=' + newPos);
+                $('a.jsp_imgA').height(itmeH);
+                 $('div.item > div.row > div').height(itmeH);
+                $('img.jsp_imgPos').removeAttr('style');
+                $('img.jsp_imgPos').css({
+                    left: 0 - newPos
+                });
+            }
+            else {
+             //alert('小於 992');
+             $('img.jsp_imgPos').removeAttr('style');
+             $('img.jsp_imgPos').css({
+                width: '100%',
+                height: 'auto'
+            });
+         }
+     }
+     checkWidth();
+        // Bind event listener
+        $(window).resize(checkWidth);
+    });
+
+
+
+
+</script>

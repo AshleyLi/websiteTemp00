@@ -1,0 +1,121 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:300);
+@import url(http://fonts.googleapis.com/css?family=Raleway:100);
+.bgGrey{
+	background-color: grey;
+}
+.mainColor1{ color: #00acb8;}
+.mainColor1b{ background-color: #00acb8;}
+.mainColor2{ color: #fbcf2a;}
+.mainColor2b{ background-color: #fbcf2a;}
+.mainColor3{ color: #999999;}
+.mainColor3b{ background-color: #999999;}
+.lightGreyBg{ background-color: #eeeeee;   }
+
+.text-center{ text-align: center;}
+.text-right{ text-align: right;}
+.text-left{ text-align: left;}
+
+.div-right{ float: right;}
+.div-left{ float: left;}
+
+.pbox{ padding: 1.5em;}
+div.sepNone{ padding: 1em; display: block;}
+div.sepNone.max{ padding: 3em; display: block;}
+.mesbox{ padding: 1.5em; color:white;}
+.mesbox h3.ui.header { color:white; font-family: 'Raleway', sans-serif;}
+.mesbox h3.ui.header .sub.header{color:white; font-family: 'Raleway', sans-serif; opacity: 0.8; margin-top: 0.75em;}
+
+div.separater{border-top: 1px solid #eeeeee;}
+div.separater.max{ border-width: 5px;}
+
+/* sementic ui*/
+.ui.circular.button{ background-color: white;}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{font-family: 'Raleway', sans-serif;font-weight: 100;}
+.ui.list .list > .item .header, .ui.list > .item .header{ color:#00acb8 !important;font-family: 'Raleway', sans-serif; }
+.ui.list .list > .item .description, .ui.list > .item .description{color: rgba(0, 0, 0, 0.5);}
+.ui.list .list > .item > i.icon, .ui.list > .item > i.icon{ padding: .75rem 1rem;}
+ul.ui.list li, ol.ui.list li, .ui.list > .item, .ui.list .list > .item{ padding:.75em 0em;}
+.ui.list .list > .item > i.icon, .ui.list > .item > i.icon{ color:#00acb8;}
+.ui.divided.list > .item{ border-top:none; background: #eeeeee; padding: .75em 0em;}
+.ui.list .list > .item .header, .ui.list > .item:nth-child(2n){ background-color: transparent;}
+.ui.divided.list > .item:last-child:nth-child(2n){ border-bottom: 1px solid rgba(39, 41, 43, 0.15); }
+.header{font-family: 'Raleway'}
+
+
+/* Bootstrap */
+.navbar-default{ border:none;}
+ul.nav.navbar-nav.navbar-right > li > a { padding-left: 0px; font-family: 'Raleway', sans-serif; color:#a5a5a4;}
+ul.nav.navbar-nav.navbar-right > li:last-child > a::after{ content:"";}
+ul.nav.navbar-nav.navbar-right > li > a::after {content:"/"; padding-left: 1.5rem; color:#a5a5a4; }
+ul.nav.navbar-nav.navbar-right > li > a:hover{ color:#00acb8;}
+ul.nav.navbar-nav.navbar-right > li.active > a{ background: transparent; color:#333;}
+
+.navbar-toggle{margin-right:0px;}
+.navbar-default .navbar-toggle{ border-color:transparent;}
+.carousel.slide{ position: absolute; bottom: 0px;}
+
+/* Basic
+==============================================*/
+body{color:rgba(0, 0, 0, 0.5);}
+a{ color:#ff931e;}
+h2.title{ color:#999999; font-weight: 100; margin-top: 0px;}
+#footer{}
+#footer ul { padding-left:0px;}
+#footer ul > li { list-style: none;}
+h1.pageTitle{ font-size: 3.5em;}
+
+.iuilogo{ font-size: 2rem; color:#333; font-family: 'Raleway', sans-serif; }
+
+/* Basic - label
+==============================================*/
+.year{ display: block; }
+.year > span{ display: block; line-height: 3rem; vertical-align: middle; text-align: center; width: 100%; background-color: #fbcf2a; font-family: font-family: 'Raleway', sans-serif; width: 3rem; height: 3rem; color:white; text-shadow:0px 1px 0px rgba(0,0,0,0.2);}
+
+/*index
+==============================================*/
+#index .logo{ position: absolute; z-index: 1;  top:0px; left: 10px;}
+#index .topMenu{ position: relative; z-index: 1000;}
+#index .sliders{ min-height: 300px;  position: relative;}
+.noticAward{
+	height: 400px;
+	position: relative; 
+	bottom: 130px;
+}
+#index h3.ui.header .sub.header{ margin-top: 0.75em;}
+#index .area1 > div{ max-height: 270px; overflow: visible;}
+#index .area1 .pbox{min-height: 270px;}
+#index .project1 .ribbon{position: absolute;left: 2px;top: 200px;}
+
+/* Projects
+==============================================*/
+
+.cateSelect { height: 90px; position: relative;}
+.cateSelect > .labels{ text-align: right; position: absolute; right:15px; bottom:0px;}
+.cateSelect > .labels > .label{ cursor: pointer; margin: 0em  0em 0.5em 0.75em ;}
+.cateSelect > .labels > .label:hover
+.itemList .item.mainColor1b { color:white;}
+.itemList .item{ height: 200px;  margin-bottom: 2rem; color:white;}
+.itemList .item .info { padding: 1rem;}
+.itemList .item a{overflow: hidden;}
+.itemList .item a.img{ overflow: hidden; display: block; text-align: center;}
+.itemList .item img.jsp_imgPos{ position: relative;  }
+.itemList .item .content{ padding:15px 15px 15px 0; }
+.itemList .item .content:last-child{ padding:15px 30px 15px 0; }
+.itemList .item .title{ margin-top: 0px; color:white;}
+.itemList .item a.circular:hover{ opacity: 0.8;}
+.itemList .item .ribbon.label {position: absolute; bottom: 2rem;left: 1px; z-index: 100;}
+.itemList .item h5{ margin-top: 0.75rem;}
+.itemList .item ul{ list-style: none; margin-left: 0px; padding: 0px;}
+.itemList .item ul > li{}
+.itemList .item ul > li > a { color:inherit;}
+
+.ui.menu.pagination{ margin: 0px auto; box-shadow:none; border-radius: none;}
+.ui.menu.pagination > .item:first-child{border-radius: none;}
+.ui.menu.pagination > .item:hover{ background-color: inherit; color:#00acb8;}
+/* Members
+==============================================*/
+#members .itemList .item{ height: auto;}
+
+.lightGreyBg.item, .lightGreyBg.item h2.title { color:#333;}
+.date{ font-style: italic; font-size: .5rem;opacity: 0.2;
+}

@@ -1,0 +1,112 @@
+
+<div id="Members" class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-4"><h1 class="pageTitle">Members</h1></div>
+                <!-- <div class="col-md-8 cateSelect">
+                    <div class="ui large labels">
+                        <div class="ui yellow label">
+                            All
+                        </div>
+                        <div class="ui label">
+                            UI/UX
+                        </div>
+                        <div class="ui label">
+                            Developer
+                        </div>
+                        
+                    </div>
+                </div> -->
+            </div>
+
+            <div class="sepNone"></div>
+
+            <div class="row itemList">
+                
+                <% 3.times do%>
+                <div class="col-md-6 ">
+                    <div class="mainColor1b item jsp_item"> 
+                        <div class="row">
+                            <div class="col-md-5">
+                            <div class="ui blue ribbon label">
+                                <!-- <i class="spoon icon"></i> --> UX & Interaction Designer
+                            </div>
+                                <a href="" class="img jsp_imgA"><img class="jsp_imgPos" src="images/projects-imgDemo.jpg"  alt=""></a>
+                            </div>
+                            <div class="col-md-7 content">
+
+                                <h2 class="title">Ashley Li</h2>
+                                <p class="abstract jsp_textOverflow"><%= lorem_paragraph %></p>
+                                <ul>
+                                    <li><a href="">Project Name</a></li>
+                                    <li><a href="">Project Name</a></li>
+                                    <li><a href="">Project Name</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+                <% end %>
+
+            </div>
+            <div class="sepNone "></div>
+        </div>
+    </div>
+</div>
+<script>
+
+
+    $(document).ready(function(){
+        //限制字符个数
+        $('.jsp_textOverflow').each(function(){
+            var maxwidth = 180 ;
+            if($(this).text().length > maxwidth){
+            $(this).text($(this).text().substring(0 , maxwidth) );
+            $(this).html($(this).html() + '…' );
+            }
+        });
+    });
+
+
+    $( window ).ready(function() {
+        var windowSize = $(window).width();
+        var currentW = $(window).width();
+        var imgW = $('img.jsp_imgPos').width();
+        var imgH = $('img.jsp_imgPos').height();
+        var aW = $('a.jsp_imgA').width();
+        var itmeH = $('div.jsp_item').height();
+        var newPos ;
+        function checkWidth() {
+             
+            if ( windowSize > 992) {
+                newPos = imgW / 2 - aW / 2;
+                // alert('newPos=' + newPos);
+                $('img.jsp_imgPos').removeAttr('style');
+                $('a.jsp_imgA').height(itmeH);
+                $('img.jsp_imgPos').css({
+                    left: 0 - newPos,
+                });
+            }
+            else {
+             //alert('小於 992');
+             $('img.jsp_imgPos').removeAttr('style');
+             $('img.jsp_imgPos').css({
+                width: '100%',
+                height: 'auto'
+            });
+         }
+     }
+     checkWidth();
+        // Bind event listener
+        $(window).resize(checkWidth);
+    });
+
+
+
+
+</script>

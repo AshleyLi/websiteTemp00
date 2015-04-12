@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Standard Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+
+
+    <!-- Site properties -->
+    <title>DCT - Projects</title>
+    <link rel="stylesheet" href="stylesheets/dist/components/reset.css">
+    <link rel="stylesheet" href="stylesheets/dist/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/dist/semantic.css">
+    <link rel="stylesheet" href="stylesheets/layout201502.css">
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
+    <script src="stylesheets/dist/bootstrap.min.js"></script>
+    <script src="stylesheets/dist/semantic.js"></script>
+</head>
+
+<body id="index">
+
+    <div class="container">
+        <div class="sepNone "></div>
+        <!-- Top menu -->
+        <div class="row">
+            <div class="col-md-12 ">
+              
+            </div>
+
+            <div class="col-md-12  topMenu ">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand iuilogo" title="Innovative user interface lab" href="#">
+                                <span class="mainColor2">Digital </span>
+                                <span class="mainColor1">Contents</span>
+                                <span>&</span>
+                                <span class="mainColor2">Teknowledgies</span>
+                                
+                            </a>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="index.html.erb">Home</a>
+                                </li>
+                                <li><a href="about.html.erb">About</a>
+                                </li>
+                                <li><a href="members.html.erb">Members</a>
+                                </li>
+                                <li><a href="projects.html.erb">Projects</a>
+                                </li>
+                                <li><a href="papers.html.erb">Papers</a>
+                                </li>
+                                <li><a href="award.html.erb">Awards</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+                
+            </div>
+        </div>
+		<!-- /Top menu -->
+        
+        
+    </div>
+    <div class="separater max jsp_topline"></div>
+	
+	<!-- mainContent -->
+ 
+                <%= yield %>
+
+	<div class="sepNone max"></div>
+	<!-- /mainContent -->
+
+    <!-- footer -->
+    <div id="footer" class="lightGreyBg">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-md-9 ">
+                    <h2 class="mainColor1">Contact IUI Lab</h2>
+                    <p>If you would like to join IUI Lab as a graduate student or have questions about IUI Lab, please contact Professor Yu.</p>
+                    <a href="">jonesyu@cs.nccu.edu.tw</a>
+                    <br>
+                    <br>
+                    <br>
+                    <p>Please contact our administrative assistant for general inquiries about our research:</p>
+                    <a href="">questionmark2029@gmail.com</a>
+
+                </div>
+                <div class="col-md-3">
+                    <ul>
+                        <li>
+                            <h3 class="mainColor1">OFFICE HOUR</h3>
+                        </li>
+                        <li>+886 (02) 2222–2222</li>
+                        <li>
+                            <h3 class="mainColor1">PHONE</h3>
+                        </li>
+                        <li>+886 (02) 2222–2222</li>
+                        <li>
+                            <h3 class="mainColor1">LOCATION</h3>
+                        </li>
+                        <li>NO.64,Sec.2,ZhiNan Rd.,Wenshan District,Taipei City 11605,Taiwan </li>
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="sepNone"></div>
+    </div>
+    <!-- /footer -->
+    <script>
+    //--LiveReload
+    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+        //--/LiveReload
+
+    var targetH = $('div.jsp_projectH1').height();
+    $('div.jsp_setH').height(targetH);
+
+    // Get page id =?
+    var pageId = $('div.pageId').attr('id');
+    //alert('Page id = '+ pageId );
+
+    for (var i = 0; i < 10; i++) {
+        var currentPage = $('ul.nav li:nth-child(' + i + ') a ').text();
+        var showPageId = $('div.pageId').attr('id') ;
+        if( currentPage == showPageId ){
+
+            $('ul.nav li:nth-child(' + i + ')').addClass('active')
+
+        }
+        
+    }
+
+    </script>
+    <%= livereload_js %>
+</body>
+
+</html>
